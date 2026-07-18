@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc; /* Light Default Background */
+  color: #0f172a; /* Slate 900 Default Text */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(1.5deg);
+  }
+}
+
+@keyframes float-shadow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 0.15;
+  }
+}
+
+@keyframes border-glowing {
+  0%, 100% {
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
+  }
+  50% {
+    border-color: rgba(6, 182, 212, 0.6);
+    box-shadow: 0 0 25px rgba(6, 182, 212, 0.35);
+  }
+}
+
+.animate-mascot-float {
+  animation: float 4.5s ease-in-out infinite;
+}
+
+.animate-mascot-shadow {
+  animation: float-shadow 4.5s ease-in-out infinite;
+}
+
+.animate-glow-border {
+  animation: border-glowing 4s infinite;
+}
+
+.logo-glow {
+  filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.4));
+  transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.logo-glow:hover {
+  filter: drop-shadow(0 0 35px rgba(6, 182, 212, 0.8));
+  transform: scale(1.05) rotate(2deg);
+}
+
+.title-glow {
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.title-glow:hover {
+  text-shadow: 0 0 30px rgba(6, 182, 212, 0.6);
+}
+
+
